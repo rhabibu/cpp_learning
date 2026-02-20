@@ -56,7 +56,7 @@ int sum_of_even(int num){
         }num=num/10;
     }
 }
-int main(choice){
+int main (choice){
     countdigit(choice);
     int choice;
     cout<<"Enter your cho";
