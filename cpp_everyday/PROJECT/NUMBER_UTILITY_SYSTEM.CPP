@@ -45,7 +45,7 @@ int largeDigit(int num){
         if(digit>largest_digit){
             largest_digit=digit;
         }num=num%10;
-    }
+    }return largest_digit;
 }
 int sum_of_even(int num){
     int sum=0;
@@ -54,11 +54,52 @@ int sum_of_even(int num){
         if(digit%2==0){
             sum=sum+digit;
         }num=num/10;
-    }
+    }return sum;
 }
-int main (choice){
-    countdigit(choice);
+int main (){
     int choice;
-    cout<<"Enter your cho";
+    countdigit(choice);
+    cout<<"Enter your choice:";
     cin>>choice;
+    int num;
+    if(choice==1){
+        cout<<"Enter number:";
+        cin>>num;
+        cout<<"The number of digit is:"<<countdigit(num);
+    }
+    else if(choice==2){
+         cout<<"Enter number:";
+        cin>>num;
+        int result=isPrime(num);
+        if(result==1){
+            cout<<"The give number is not prime.";
+        }
+        else if(result==2){
+            cout<<"The given number is not prime.";
+        }
+        else{
+            cout<<"The given number is prime.";
+        }
+    }
+    else if(choice==3){
+         cout<<"Enter number:";
+        cin>>num;
+        cout<<"The revese of given number is "<<" "<<reverseNum(num);
+    }
+    else if( choice==4){
+         cout<<"Enter number:";
+        cin>>num;
+        cout<<"The largest digit is:"<<largeDigit(num);
+    }
+    else if (choice==5){
+         cout<<"Enter number:";
+        cin>>num;
+        cout<<"The sum of the digit is :"<<sum_of_even(num);
+    }
+    else if(choice==6){
+        cout<<"exit";
+    }
+    else{
+        cout<<"invalid option";
+    }
 }
